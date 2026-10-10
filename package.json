@@ -8,8 +8,7 @@
     "dev:local": "vite",
     "prebuild": "node scripts/check_synthetic.mjs",
     "build": "vite build",
-    "preview": "vite preview --host",
-    "publish:site": "node scripts/publish_site.mjs"
+    "preview": "vite preview --host"
   },
   "devDependencies": {
     "vite": "^8.3.0"

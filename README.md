@@ -22,10 +22,10 @@ served by Vite reads that JSON and renders it with Plotly.js — on your compute
 | `notebooks/psll_pipeline.ipynb` | The pipeline. Runs unchanged in Colab or VS Code |
 | `web/` | Dashboard: `index.html`, `css/`, `js/api.js` (data), `js/theme.js`, `js/renderers.js`, `js/main.js` |
 | `web/data/` | Notebook output — don't edit by hand |
-| `package.json`, `vite.config.js` | Vite dev server for `web/` (port 8000). `npm run publish:site` → personal site `/psll/` |
+| `package.json`, `vite.config.js` | Vite dev server for `web/` (port 8000); `npm run build` → `dist/` (what Cloudflare deploys) |
 | `content/so_what_next.json` | Text + references for the *So what next?* tab |
 | `scripts/polar_live.py`, `scripts/import_silver.py` | Live H10 recording; team-pipeline silver → `raw_data/real/` |
-| `scripts/publish_site.mjs` | Copies `web/` into `~/Developer/personalSite/public/psll/` (blocks real data by default) |
+| `scripts/check_synthetic.mjs` | Runs before every build; refuses to build real study data |
 | `.vscode/` | Tasks: serve dashboard, run notebook, regenerate sample data |
 
 ## Run it in VS Code
@@ -43,25 +43,31 @@ Equivalent from a terminal at the project root:
 npm run dev          # = vite --host; prints a Local and a Network URL
 ```
 
-## View it on your phone (published to the personal site)
+## Live site and collaborating
 
-The study Wi-Fi blocks phone ↔ laptop connections, so the phone version lives on the personal website at
-**`<your site>/psll/`** (unlisted, `noindex`). `web/` is copied into `~/Developer/personalSite/public/psll/`:
+**https://dilloncolbert.com/psll/** (unlisted, `noindex`), which is also reachable at `psll-dataviz.pages.dev`.
+
+- This repo (`dilloncolbert24/psll-dataviz`, private) is connected to the Cloudflare Pages project
+  `psll-dataviz`. **Every push to `main` deploys** (build `npm run build`, output `dist`).
+  The personal site serves it under `/psll` through a small proxy (`functions/psll/[[path]].js` in personalSite).
+- To update the live dashboard: re-run the notebook, commit `web/data` (and any code changes), push.
+- **Public deployment = synthetic data only.** `raw_data/real/` is git-ignored, notebook outputs are stripped on
+  commit (nbstripout), and the build fails if `web/data/manifest.json` has `synthetic: false`
+  (override: `PSLL_ALLOW_REAL=1`, only once public release is cleared).
+- On touch screens charts don't drag-zoom (the page scrolls normally); tap a point for its value.
+
+**New collaborators**, once after cloning:
 
 ```bash
-npm run publish:site            # copies web/ → personalSite/public/psll/ (synthetic data only)
-cd ~/Developer/personalSite && git add public/psll && git commit -m "Update PSLL dashboard" && git push
+npm install
+pip install nbstripout && nbstripout --install
+cp raw_data/templates/*.csv raw_data/real/    # only if you will enter real data locally
 ```
 
-- The personal site's repo and website are **public**. The script refuses to copy real study data
-  (`manifest.synthetic = false`) unless run with `-- --allow-real`; only do that once public release is cleared.
-- The site doesn't see Drive updates live: re-run the notebook → `publish:site` → push to update it.
-- On touch screens charts don't drag-zoom (the page scrolls normally); tap a point for its value.
-  Set `PSLL_SITE_DIR` if the site lives somewhere else.
+Work on a branch and open a pull request, or push to `main` if the team agrees. Pushes go live immediately.
 
-`npm run dev` still serves the dashboard on this computer (and on the LAN, on networks that allow it).
-`npm run dev:local` binds to localhost only. Without Node:
-`python3 -m http.server 8000 --directory web`.
+`npm run dev` serves the dashboard on this computer (and on the LAN, on networks that allow it);
+`npm run dev:local` binds to localhost only. Without Node: `python3 -m http.server 8000 --directory web`.
 
 ## Run it in Colab (connecting the two workflows)
 
