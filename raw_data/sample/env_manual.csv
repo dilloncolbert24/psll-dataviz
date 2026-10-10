@@ -1,0 +1,9 @@
+site,date,time,sun_condition,wind,precipitation,ground_condition,noise
+Space A,2026-10-01,09:30,1,1,0,0,1
+Space A,2026-10-01,11:30,2,1,0,0,1
+Space A,2026-10-01,14:00,3,2,0,0,1
+Space A,2026-10-01,16:00,3,1,0,0,1
+Space B,2026-10-01,09:30,1,1,0,0,1
+Space B,2026-10-01,11:30,2,1,0,0,1
+Space B,2026-10-01,14:00,3,2,0,0,1
+Space B,2026-10-01,16:00,3,1,0,0,1

@@ -1,0 +1,15 @@
+site,component,installed,units,notes
+Space A,Added seating,Yes,6,
+Space A,Shade,Yes,,Sail over seating
+Space A,Rug / ground definition,Yes,,
+Space A,Plants / vegetation,Yes,4,
+Space A,Landmark,Yes,,
+Space A,Signage,Yes,,
+Space A,Other,No,,
+Space B,Added seating,Yes,6,
+Space B,Shade,Yes,,Sail over seating
+Space B,Rug / ground definition,Yes,,
+Space B,Plants / vegetation,No,,
+Space B,Landmark,Yes,,
+Space B,Signage,No,,
+Space B,Other,No,,

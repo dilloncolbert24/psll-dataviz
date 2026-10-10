@@ -1,0 +1,9 @@
+site,window,phase,condition,start,end,n_readings,temp_mean,temp_min,temp_max,rh_mean,rh_min,rh_max,sun_condition,wind,precipitation,ground_condition,noise
+Space A,PRE Rotation,rotation,PRE,09:20,10:20,13,20.7,20.4,21.2,61.4,60.0,64.0,mostly cloudy,light,none,dry,moderate
+Space A,PRE Behavior,behavior,PRE,11:20,11:45,6,22.0,21.7,22.3,56.5,55.0,58.0,partly sunny,light,none,dry,moderate
+Space A,POST Rotation,rotation,POST,13:45,14:45,13,24.2,23.6,24.9,48.8,47.0,51.0,clear/direct sun,moderate,none,dry,moderate
+Space A,POST Behavior,behavior,POST,15:45,16:10,6,25.3,25.2,25.5,44.2,43.0,45.0,clear/direct sun,light,none,dry,moderate
+Space B,PRE Rotation,rotation,PRE,09:20,10:20,13,20.7,20.4,21.2,61.4,60.0,64.0,mostly cloudy,light,none,dry,moderate
+Space B,PRE Behavior,behavior,PRE,11:20,11:45,6,22.0,21.7,22.3,56.5,55.0,58.0,partly sunny,light,none,dry,moderate
+Space B,POST Rotation,rotation,POST,13:45,14:45,13,24.2,23.6,24.9,48.8,47.0,51.0,clear/direct sun,moderate,none,dry,moderate
+Space B,POST Behavior,behavior,POST,15:45,16:10,6,25.3,25.2,25.5,44.2,43.0,45.0,clear/direct sun,light,none,dry,moderate

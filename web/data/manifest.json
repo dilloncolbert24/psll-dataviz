@@ -1,0 +1,345 @@
+{
+  "project": "PSLL — Public Space as a Living Lab",
+  "research_question": "Does the spatial intervention coincide with observable changes in how people move through, occupy, and use the study area?",
+  "generated_at": "2026-10-10T15:00:13",
+  "synthetic": true,
+  "sites": [
+    "Space A",
+    "Space B"
+  ],
+  "stages": [
+    {
+      "id": 1,
+      "title": "What did each measurement tell us?",
+      "prompt": "What interpretation would you make from each data source alone?"
+    },
+    {
+      "id": 2,
+      "title": "Now look at the context",
+      "prompt": "Does the environmental timeline or spatial configuration change your interpretation?"
+    },
+    {
+      "id": 3,
+      "title": "Put everything together",
+      "prompt": "Where does the evidence converge or diverge? What can — and can't — we claim?"
+    },
+    {
+      "id": 4,
+      "title": "So what next?",
+      "prompt": "If you ran PSLL in your own city next month, what would you keep, what would you change, and who would you invite to collect the data?"
+    }
+  ],
+  "figures": [
+    {
+      "id": "s1_perceived_restoration",
+      "stage": 1,
+      "layer": "Affect",
+      "title": "Perceived restoration: PRE → POST",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s1_affect_balance",
+      "stage": 1,
+      "layer": "Affect",
+      "title": "Affect balance (positive − negative): PRE → POST",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s1_rmssd_ms",
+      "stage": 1,
+      "layer": "Physiology",
+      "title": "RMSSD: PRE → POST",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s1_mean_hr_bpm",
+      "stage": 1,
+      "layer": "Physiology",
+      "title": "Mean heart rate: PRE → POST",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s1_pvt_median_rt_ms",
+      "stage": 1,
+      "layer": "Cognition",
+      "title": "PVT median reaction time: PRE → POST",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s1_flanker_interference_ms",
+      "stage": 1,
+      "layer": "Cognition",
+      "title": "Flanker interference: PRE → POST",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "backup_positive_affect",
+      "stage": 1,
+      "layer": "Affect",
+      "title": "Positive affect: PRE → POST",
+      "kind": "plotly",
+      "backup": true,
+      "exploratory": false
+    },
+    {
+      "id": "backup_negative_affect",
+      "stage": 1,
+      "layer": "Affect",
+      "title": "Negative affect: PRE → POST",
+      "kind": "plotly",
+      "backup": true,
+      "exploratory": false
+    },
+    {
+      "id": "backup_sdnn_ms",
+      "stage": 1,
+      "layer": "Physiology",
+      "title": "SDNN: PRE → POST",
+      "kind": "plotly",
+      "backup": true,
+      "exploratory": false
+    },
+    {
+      "id": "backup_pvt_lapses",
+      "stage": 1,
+      "layer": "Cognition",
+      "title": "PVT lapses: PRE → POST",
+      "kind": "plotly",
+      "backup": true,
+      "exploratory": false
+    },
+    {
+      "id": "backup_flanker_accuracy",
+      "stage": 1,
+      "layer": "Cognition",
+      "title": "Flanker accuracy: PRE → POST",
+      "kind": "plotly",
+      "backup": true,
+      "exploratory": false
+    },
+    {
+      "id": "s1_behavior_summary",
+      "stage": 1,
+      "layer": "Behavior",
+      "title": "Stationary behavior: PRE vs POST",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s1_occupancy_timeline",
+      "stage": 1,
+      "layer": "Behavior",
+      "title": "Stationary occupancy through time",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "backup_movement",
+      "stage": 1,
+      "layer": "Behavior",
+      "title": "People moving: count-line crossings per 5 min",
+      "kind": "plotly",
+      "backup": true,
+      "exploratory": false
+    },
+    {
+      "id": "s2_env_temp",
+      "stage": 2,
+      "layer": "Environment",
+      "title": "Air temperature by exposure window",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s2_env_rh",
+      "stage": 2,
+      "layer": "Environment",
+      "title": "Relative humidity by exposure window",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s2_env_timeline",
+      "stage": 2,
+      "layer": "Environment",
+      "title": "Environmental timeline (09:00–17:00)",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s2_env_codes",
+      "stage": 2,
+      "layer": "Environment",
+      "title": "Manually coded conditions per window",
+      "kind": "table",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s2_spatial",
+      "stage": 2,
+      "layer": "Spatial",
+      "title": "Spatial configuration: baseline vs intervention",
+      "kind": "table",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s2_components",
+      "stage": 2,
+      "layer": "Spatial",
+      "title": "Intervention components installed (POST)",
+      "kind": "table",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s2_context_flags",
+      "stage": 2,
+      "layer": "Context",
+      "title": "Contextual events (interpretive flags)",
+      "kind": "table",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s3_matrix",
+      "stage": 3,
+      "layer": "Synthesis",
+      "title": "Multimodal evidence matrix",
+      "kind": "matrix",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s3_restoration_x_rmssd",
+      "stage": 3,
+      "layer": "Synthesis",
+      "title": "Δ Perceived restoration × Δ RMSSD",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": true
+    },
+    {
+      "id": "s3_restoration_x_pvt",
+      "stage": 3,
+      "layer": "Synthesis",
+      "title": "Δ Perceived restoration × Δ PVT median reaction time",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": true
+    },
+    {
+      "id": "s3_panas_x_hr",
+      "stage": 3,
+      "layer": "Synthesis",
+      "title": "Δ Affect balance (positive − negative) × Δ Mean heart rate",
+      "kind": "plotly",
+      "backup": false,
+      "exploratory": true
+    },
+    {
+      "id": "s4_where_we_stand",
+      "stage": 4,
+      "layer": "Established literature",
+      "title": "Where a pop-up study like PSLL sits",
+      "kind": "article",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s4_carry_forward",
+      "stage": 4,
+      "layer": "Methods",
+      "title": "What to carry forward from this round",
+      "kind": "article",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s4_hometown",
+      "stage": 4,
+      "layer": "Expansion",
+      "title": "Take it home: PSLL in your hometown",
+      "kind": "article",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s4_citizen_science",
+      "stage": 4,
+      "layer": "Emerging literature",
+      "title": "Going crowdsourced: a citizen-science PSLL",
+      "kind": "article",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s4_wearables",
+      "stage": 4,
+      "layer": "Emerging literature",
+      "title": "Smartwatch or chest strap: what data is good enough?",
+      "kind": "article",
+      "backup": false,
+      "exploratory": false
+    },
+    {
+      "id": "s4_ethics",
+      "stage": 4,
+      "layer": "Ethics",
+      "title": "Ground rules for citizen data",
+      "kind": "article",
+      "backup": false,
+      "exploratory": false
+    }
+  ],
+  "qc": [
+    {
+      "level": "info",
+      "layer": "Behavior",
+      "message": "22 observation sheets: Space A POST=6, Space A PRE=6, Space B POST=5, Space B PRE=5"
+    },
+    {
+      "level": "warning",
+      "layer": "Behavior",
+      "message": "Observer disagreement Space B POST @15min (CV=0.26, range 3–5)"
+    },
+    {
+      "level": "warning",
+      "layer": "Behavior",
+      "message": "Observer disagreement Space B PRE @20min (CV=0.29, range 3–5)"
+    },
+    {
+      "level": "warning",
+      "layer": "Physiology",
+      "message": "BP07 POST: quality_flag=check (kept)"
+    },
+    {
+      "level": "info",
+      "layer": "Individual",
+      "message": "24 participant(s) missing a PRE or POST value on ≥1 metric"
+    }
+  ],
+  "counts": {
+    "observation_sheets": 22,
+    "participants": 24,
+    "frigga_readings": 97
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve dashboard (Vite, phone-accessible)",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activelyMatches": true,
+          "beginsPattern": "VITE",
+          "endsPattern": "Network:|Local:"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Install dashboard dependencies",
+      "type": "shell",
+      "command": "npm install",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run pipeline notebook (local)",
+      "type": "shell",
+      "command": "jupyter nbconvert --to notebook --execute --inplace notebooks/psll_pipeline.ipynb",
+      "problemMatcher": []
+    },
+    {
+      "label": "Regenerate synthetic sample data",
+      "type": "shell",
+      "command": "python3 scripts/make_sample_data.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "Record Polar H10 (live)",
+      "type": "shell",
+      "command": "python3 scripts/polar_live.py ${input:participant} ${input:condition} --minutes ${input:minutes}",
+      "problemMatcher": []
+    },
+    {
+      "label": "Import team pipeline outputs (silver → raw_data/real)",
+      "type": "shell",
+      "command": "python3 scripts/import_silver.py --outputs \"${input:outputsFolder}\"",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "participant",
+      "type": "promptString",
+      "description": "Participant ID (e.g. P001)"
+    },
+    {
+      "id": "condition",
+      "type": "pickString",
+      "description": "Condition",
+      "options": [
+        "PRE",
+        "POST"
+      ]
+    },
+    {
+      "id": "minutes",
+      "type": "promptString",
+      "description": "Recording length (minutes)",
+      "default": "5"
+    },
+    {
+      "id": "outputsFolder",
+      "type": "promptString",
+      "description": "Path to PSLL_Data/_outputs"
+    }
+  ]
+}

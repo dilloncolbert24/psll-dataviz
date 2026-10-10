@@ -1,0 +1,23 @@
+metric,label,site,n,mean_delta,sd_delta,dz,ci_low,ci_high
+perceived_restoration,Perceived restoration,Space A,12,0.728,0.898,0.811,0.158,1.299
+perceived_restoration,Perceived restoration,Space B,12,0.15,0.58,0.259,-0.218,0.518
+affect_balance,Affect balance (positive − negative),Space A,12,0.78,0.569,1.37,0.418,1.142
+affect_balance,Affect balance (positive − negative),Space B,12,0.168,0.574,0.293,-0.196,0.533
+positive_affect,Positive affect,Space A,12,0.444,0.36,1.232,0.215,0.673
+positive_affect,Positive affect,Space B,12,-0.002,0.296,-0.006,-0.19,0.186
+negative_affect,Negative affect,Space A,12,-0.336,0.341,-0.984,-0.553,-0.119
+negative_affect,Negative affect,Space B,12,-0.17,0.417,-0.408,-0.435,0.095
+rmssd_ms,RMSSD,Space A,12,4.425,5.38,0.822,1.006,7.844
+rmssd_ms,RMSSD,Space B,12,0.225,2.951,0.076,-1.65,2.1
+mean_hr_bpm,Mean heart rate,Space A,12,2.525,1.966,1.285,1.276,3.774
+mean_hr_bpm,Mean heart rate,Space B,12,3.158,2.032,1.554,1.867,4.45
+sdnn_ms,SDNN,Space A,12,-1.367,5.415,-0.252,-4.807,2.074
+sdnn_ms,SDNN,Space B,12,1.225,4.161,0.294,-1.419,3.869
+pvt_median_rt_ms,PVT median reaction time,Space A,12,-11.833,9.114,-1.298,-17.624,-6.043
+pvt_median_rt_ms,PVT median reaction time,Space B,12,2.333,10.057,0.232,-4.057,8.724
+pvt_lapses,PVT lapses,Space A,12,-1.0,2.132,-0.469,-2.355,0.355
+pvt_lapses,PVT lapses,Space B,12,-0.417,2.712,-0.154,-2.14,1.307
+flanker_interference_ms,Flanker interference,Space A,12,-9.083,19.947,-0.455,-21.757,3.591
+flanker_interference_ms,Flanker interference,Space B,12,0.5,17.149,0.029,-10.396,11.396
+flanker_accuracy,Flanker accuracy,Space A,12,0.003,0.028,0.093,-0.015,0.02
+flanker_accuracy,Flanker accuracy,Space B,12,0.025,0.028,0.899,0.007,0.042

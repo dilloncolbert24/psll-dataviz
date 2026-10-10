@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+__pycache__
+.ipynb_checkpoints
+
+# Real study data never goes to git (the repo and its deployment can be shared).
+# Clones start from raw_data/templates; see raw_data/real/README.md.
+raw_data/real/*
+!raw_data/real/README.md
+raw_data/polar_live/
+
+# Stale Vite cache from the old PSLL/ scaffold
+PSLL/
