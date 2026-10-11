@@ -1,9 +1,0 @@
-site,date,window,phase,condition,start_time,end_time
-Space A,2026-10-01,PRE Rotation,rotation,PRE,09:20,10:20
-Space A,2026-10-01,PRE Behavior,behavior,PRE,11:20,11:45
-Space A,2026-10-01,POST Rotation,rotation,POST,13:45,14:45
-Space A,2026-10-01,POST Behavior,behavior,POST,15:45,16:10
-Space B,2026-10-01,PRE Rotation,rotation,PRE,09:20,10:20
-Space B,2026-10-01,PRE Behavior,behavior,PRE,11:20,11:45
-Space B,2026-10-01,POST Rotation,rotation,POST,13:45,14:45
-Space B,2026-10-01,POST Behavior,behavior,POST,15:45,16:10

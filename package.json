@@ -4,13 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "dev:local": "vite",
-    "prebuild": "node scripts/check_synthetic.mjs",
-    "build": "vite build",
-    "preview": "vite preview --host"
-  },
-  "devDependencies": {
-    "vite": "^8.3.0"
+    "build": "node scripts/build.mjs",
+    "preview": "python3 -m http.server 8000 --directory public"
   }
 }

@@ -1,5 +1,0 @@
-site,condition,available_seating,seats_occupied_start,shade,vegetation,landmark,signage,ground_intervention,other_temporary,photo_file
-Space A,PRE,7,2,None,Existing,No,No,No,,A_pre.jpg
-Space A,POST,13,4,Partial,Existing,Yes,Yes,Yes,,A_post.jpg
-Space B,PRE,7,2,None,Existing,No,No,No,,B_pre.jpg
-Space B,POST,13,4,Partial,Existing,Yes,No,Yes,,B_post.jpg
